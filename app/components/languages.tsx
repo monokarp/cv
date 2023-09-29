@@ -1,6 +1,6 @@
 export default function Languages() {
     return (
-        <div className='flex flex-col w-2/3'>
+        <div className='flex flex-col'>
             <p>Languages:</p>
             <p>Russian, Ukrainian - native</p>
             <p>English - C1</p>
