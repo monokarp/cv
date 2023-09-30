@@ -4,5 +4,6 @@ export interface ProjectInfo {
     to: Date,
     title: string,
     techStack: string,
+    team: string,
     description: string,
 }
