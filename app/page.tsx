@@ -60,7 +60,7 @@ export default function Home() {
             title: 'POS app for a restaurant SW solution',
             techStack: 'Angular, TS, Jest, Protractor, Cordova, SQLite, Node, MongoDB',
             team: 'Over 50 POS developers; dedicated BA, QA, AQA, infrastructure and backend teams.',
-            description: `A massive and at certain points intense project. Over the years I partook in various responsibilities: designing, implementing and overseeing the development of product features of all scope sizes, internal project tools, e2e testing, project documentation and onboarding processes, feature-ownership of a product's sub-domain, code review. Involved in regular communication with all dedicated teams.`,
+            description: `Long-term development of a feature-rich restaurant software solution. Over the years I partook in various responsibilities: designing, implementing and overseeing the development of product features of all scope sizes, internal project tools, e2e testing, project documentation and onboarding processes, feature-ownership of a product's sub-domain, code review. Involved in regular communication with all dedicated teams.`,
           },
           {
             employer: 'Dev.Pro',
