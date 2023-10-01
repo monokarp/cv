@@ -8,12 +8,13 @@ const formatDate = (date: Date) => date.toLocaleDateString('en-us', { year: "num
 
 export default function ProjectSummary({ project }: ProjectSummaryProps) {
     return (
-        <div className='p-4 m-4 rounded-md bg-white'>
-            <p>{`${formatDate(project.from)} - ${formatDate(project.to)} ${project.employer}`}</p>
-            <p>{project.title}</p>
-            <p>{`Key technologies: ${project.techStack}`}</p>
-            <p>{`Team composition: ${project.team}`}</p>
-            <p>{project.description}</p>
+        <div className='ml-4 mb-4 p-4 rounded-md bg-white text-xs tracking-tight'>
+            <p className='text-base tracking-normal'>{project.employer}</p>
+            <p className='pb-2'>{`${formatDate(project.from)} - ${formatDate(project.to)}`}</p>
+            <p className='text-sm pb-1'>{project.title}</p>
+            <p className='pb-1'>{`Key technologies: ${project.techStack}`}</p>
+            <p className='pb-1'>{`Team composition: ${project.team}`}</p>
+            <p className='pb-1'>{project.description}</p>
         </div>
     )
 }

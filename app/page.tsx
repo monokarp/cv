@@ -5,34 +5,32 @@ import CareerTimeline from './components/career-timeline/career-timeline'
 import Languages from './components/languages'
 import Education from './components/education'
 import NameAndTitle from './components/name-title'
+import Summary from './components/summary'
 
 export default function Home() {
   return (
     <main className='flex min-h-screen flex-col items-center font-mono lg:justify-center'>
-      <div className='flex flex-col w-4/5 pt-5 pb-5'>
-        <div className='flex flex-col'>
+      <div className='flex flex-col lg:w-1/2'>
+        <div className='flex flex-col p-5'>
           <NameAndTitle />
           <Image
-            className='self-center lg:absolute lg:self-end'
+            className='self-center lg:absolute lg:self-end lg:p-5'
             src='/portrait.jpg'
             alt=':^)'
             width={221}
             height={250}
             unoptimized
           />
-          <ContactInfo lines={[
-            'mnkrp.ml@gmail.com',
-            '+38 099 925 78 73',
-          ]} />
+          <ContactInfo />
+          <Languages />
+          <Education />
+          <Summary />
           <OtherLinks links={[
-            { name: 'Telegram', value: 'https://t.me/iloveparting' },
             { name: 'Github', value: 'https://github.com/monokarp' },
             { name: 'Codewars', value: 'https://www.codewars.com/users/iLovePartinG' },
             { name: 'Core JS assessment', value: 'https://www.app.javascriptinstitute.org/profile/UGV210901565' },
             { name: 'CAE assessment', value: './StatementOfResult.pdf' },
           ]} />
-          <Languages />
-          <Education />
         </div>
         <CareerTimeline projects={[
           {
@@ -77,7 +75,7 @@ export default function Home() {
             to: new Date('12/01/2022'),
             title: 'Internal company tool development and trainee mentoring',
             techStack: 'Angular, Nest, Postgres',
-            team: 'Me and another senior SE supervising a team of about 10 trainees',
+            team: 'Me and another senior SE supervising a team of a dozen trainees',
             description: 'The goal was to develop a new internal contractor-facing tool. I would mostly design and do detailed code review.',
           },
           {

@@ -9,13 +9,13 @@ type OtherLinksProps = {
 
 export default function OtherLinks({ links }: OtherLinksProps) {
     return (
-        <div>
-            <p>Other links:</p>
+        <div className='pt-3 text-sm'>
+            <div>Relevant links:</div>
             {
                 links.map((one, idx) =>
-                    <Link key={idx} className="font-semibold" href={one.value}>
-                        <p>{one.name}</p>
-                    </Link>
+                    <div key={idx} className="link">
+                        <Link href={one.value}>{one.name}</Link>
+                    </div>
                 )
             }
         </div>

@@ -1,12 +1,8 @@
 export default function NameAndTitle() {
     return (
         <div className='self-center lg:self-start'>
-            <p className='text-base'>
-                Bondarenko Oleg
-            </p>
-            <p>
-                Software Engineer
-            </p>
+            <p className='text-xl'>Bondarenko Oleg</p>
+            <p className='text-lg tracking-tight'>Software Engineer</p>
         </div>
     );
 }
