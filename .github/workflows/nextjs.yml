@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages
+name: Build and deploy to pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -52,9 +52,6 @@ jobs:
       - name: Setup env
         run: |
           touch .env
-          echo $REPO_NAME
-          echo ${{ vars.REPO_NAME }}
-          echo ${{ env.REPO_NAME }}
           echo REPO_NAME=${{ vars.REPO_NAME }} >> .env
       - name: Restore cache
         uses: actions/cache@v3

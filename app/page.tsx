@@ -6,6 +6,7 @@ import Languages from './components/languages'
 import Education from './components/education'
 import NameAndTitle from './components/name-title'
 import Summary from './components/summary'
+import portrait from '../public/portrait.jpg'
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
           <NameAndTitle />
           <Image
             className='self-center lg:absolute lg:self-end lg:p-5'
-            src='/portrait.jpg'
+            src={portrait}
             alt=':^)'
             width={221}
             height={250}

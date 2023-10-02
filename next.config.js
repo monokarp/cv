@@ -1,13 +1,16 @@
 /** @type {import('next').NextConfig} */
 
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
 const repoName = process.env.REPO_NAME;
-
-if (!repoName) { throw new Error('Failed to inject env variable') }
 
 const nextConfig = {
     output: 'export',
-    basePath: `/${repoName}`,
-    assetPrefix: `/${repoName}/`,
+}
+
+if (isGithubActions) {
+    Object.assign(nextConfig, {
+        basePath: `/${repoName}`,
+    })
 }
 
 module.exports = nextConfig
