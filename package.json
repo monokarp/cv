@@ -5,23 +5,25 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export-pdf": "node export-pdf",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "next": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
     "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "puppeteer": "^21.3.6",
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }

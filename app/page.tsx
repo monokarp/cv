@@ -1,16 +1,17 @@
-import Image from 'next/image'
-import OtherLinks from './components/other-links'
-import ContactInfo from './components/contact-info'
-import CareerTimeline from './components/career-timeline/career-timeline'
-import Languages from './components/languages'
-import Education from './components/education'
-import NameAndTitle from './components/name-title'
-import Summary from './components/summary'
-import portrait from '../public/portrait.jpg'
+import Image from 'next/image';
+import portrait from '../public/portrait.jpg';
+import CareerTimeline from './components/career-timeline/career-timeline';
+import ContactInfo from './components/contact-info';
+import Education from './components/education';
+import Languages from './components/languages';
+import NameAndTitle from './components/name-title';
+import OtherLinks from './components/other-links';
+import PdfButton from './components/pdf-button';
+import Summary from './components/summary';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center font-mono lg:justify-center'>
+    <main className='flex min-h-screen flex-col items-center bg-gray-230 text-black font-mono'>
       <div className='flex flex-col lg:w-1/2'>
         <div className='flex flex-col p-5'>
           <NameAndTitle />
@@ -89,6 +90,7 @@ export default function Home() {
             description: `The project was to design and develop services for the client's POS solution to sync transactional data between store and cloud in a schema-agnostic way.`,
           },
         ]} />
+        <PdfButton />
       </div>
     </main>
   )
