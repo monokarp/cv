@@ -11,7 +11,7 @@ import Summary from './components/summary';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center bg-gray-230 text-black font-mono'>
+    <main className='flex min-h-screen flex-col items-center bg-gray-230 text-black font-mono break-after'>
       <div className='flex flex-col lg:w-1/2'>
         <div className='flex flex-col p-5'>
           <NameAndTitle />
