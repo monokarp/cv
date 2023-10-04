@@ -6,7 +6,6 @@ import Education from './components/education';
 import Languages from './components/languages';
 import NameAndTitle from './components/name-title';
 import OtherLinks from './components/other-links';
-import PdfButton from './components/pdf-button/pdf-button';
 import Summary from './components/summary';
 
 export default function Home() {
@@ -16,7 +15,7 @@ export default function Home() {
         <div className='flex flex-col p-5'>
           <NameAndTitle />
           <Image
-            className='self-center lg:absolute lg:self-end lg:p-5'
+            className='self-center lg:absolute lg:self-end lg:py-5 lg:pl-5'
             src={portrait}
             alt=':^)'
             width={221}
@@ -91,7 +90,6 @@ export default function Home() {
           },
         ]} />
       </div>
-      <PdfButton />
     </main>
   )
 }

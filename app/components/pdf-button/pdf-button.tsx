@@ -14,7 +14,7 @@ export default function PdfButton() {
                 html2canvas: {
                     scale: 2,
                 },
-                jsPDF: { format: [420, 493], orientation: 'portrait' }
+                jsPDF: { format: [420, 509], orientation: 'portrait' }
             })
             .from(document.body)
             .toPdf()
@@ -22,6 +22,6 @@ export default function PdfButton() {
     }
 
     return (
-        <div className="link p-2 cursor-pointer absolute top-3 right-3" onClick={printPdf}>PDF</div>
+        <div className="link cursor-pointer font-medium" onClick={printPdf}>(Download PDF)</div>
     );
 }

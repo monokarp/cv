@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PdfButton from "./pdf-button/pdf-button";
 
 export default function ContactInfo() {
     return (
@@ -7,6 +8,7 @@ export default function ContactInfo() {
             <div>{'mnkrp.ml@gmail.com'}</div>
             <div>{'+38 099 925 78 73'}</div>
             <Link className="link" href='https://t.me/iloveparting'>Telegram</Link>
+          <PdfButton />
         </div>
     );
 }
