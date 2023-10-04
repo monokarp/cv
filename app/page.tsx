@@ -24,15 +24,15 @@ export default function Home() {
             unoptimized
           />
           <ContactInfo />
-          <Languages />
-          <Education />
-          <Summary />
           <OtherLinks links={[
             { name: 'Github', value: 'https://github.com/monokarp' },
             { name: 'Codewars', value: 'https://www.codewars.com/users/iLovePartinG' },
             { name: 'Core JS assessment', value: 'https://www.app.javascriptinstitute.org/profile/UGV210901565' },
             { name: 'CAE assessment', value: './StatementOfResult.pdf' },
           ]} />
+          <Languages />
+          <Summary />
+          <Education />
         </div>
         <CareerTimeline projects={[
           {
@@ -90,8 +90,8 @@ export default function Home() {
             description: `The project was to design and develop services for the client's POS solution to sync transactional data between store and cloud in a schema-agnostic way.`,
           },
         ]} />
-        <PdfButton />
       </div>
+      <PdfButton />
     </main>
   )
 }

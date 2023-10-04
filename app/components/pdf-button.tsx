@@ -22,8 +22,6 @@ export default function PdfButton() {
     }
 
     return (
-        <div className="flex justify-center items-center">
-            <div className="link px-2 pb-2 cursor-pointer" onClick={printPdf}>PDF</div>
-        </div>
-    )
+        <div className="link p-2 cursor-pointer absolute top-3 right-3" onClick={printPdf}>PDF</div>
+    );
 }

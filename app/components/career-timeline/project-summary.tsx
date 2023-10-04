@@ -1,10 +1,9 @@
+import { formatDate } from "./format-date"
 import { ProjectInfo } from "./project-info"
 
 interface ProjectSummaryProps {
     project: ProjectInfo
 }
-
-const formatDate = (date: Date) => date.toLocaleDateString('en-us', { year: "numeric", month: "short" });
 
 export default function ProjectSummary({ project }: ProjectSummaryProps) {
     return (
