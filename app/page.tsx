@@ -30,8 +30,8 @@ export default function Home() {
             { name: 'Core JS assessment', value: 'https://www.app.javascriptinstitute.org/profile/UGV210901565' },
             { name: 'CAE assessment', value: './StatementOfResult.pdf' },
           ]} />
-          <Languages />
           <Summary />
+          <Languages />
           <Education />
         </div>
         <CareerTimeline projects={[
@@ -58,7 +58,7 @@ export default function Home() {
             from: new Date('12/01/2017'),
             to: new Date('12/01/2021'),
             title: 'POS app for a restaurant SW solution',
-            techStack: 'Angular, TS, Jest, Protractor, Cordova, SQLite, Node, MongoDB',
+            techStack: 'Angular, RxJS, TS, Jest, Protractor, Cordova, SQLite, Node, MongoDB',
             team: 'Over 50 POS developers; dedicated BA, QA, AQA, infrastructure and backend teams.',
             description: `Long-term development of a feature-rich restaurant software solution. Over the years I partook in various responsibilities: designing, implementing and overseeing the development of product features of all scope sizes, internal project tools, e2e testing, project documentation and onboarding processes, feature-ownership of a product's sub-domain, code review. Involved in regular communication with all dedicated teams.`,
           },
