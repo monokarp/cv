@@ -6,7 +6,7 @@ import Education from './components/education';
 import Languages from './components/languages';
 import NameAndTitle from './components/name-title';
 import OtherLinks from './components/other-links';
-import PdfButton from './components/pdf-button';
+import PdfButton from './components/pdf-button/pdf-button';
 import Summary from './components/summary';
 
 export default function Home() {
