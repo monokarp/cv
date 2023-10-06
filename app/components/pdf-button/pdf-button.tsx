@@ -8,13 +8,13 @@ export default function PdfButton() {
         html2pdf.default()
             .set({
                 margin: 0,
-                pagebreak: {
-                    mode: 'css',
-                },
                 html2canvas: {
                     scale: 2,
                 },
-                jsPDF: { format: [420, 509], orientation: 'portrait' }
+                jsPDF: {
+                    orientation: 'portrait',
+                    format: window.innerWidth <= 1024 ? [210, 578] : [420, 509],
+                }
             })
             .from(document.body)
             .toPdf()
