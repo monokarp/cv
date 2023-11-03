@@ -7,10 +7,16 @@ import Languages from './components/languages';
 import NameAndTitle from './components/name-title';
 import OtherLinks from './components/other-links';
 import Summary from './components/summary';
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <main className='flex min-h-screen flex-col items-center bg-gray-230 text-black font-mono break-after'>
+      <Head>
+        <meta property="og:url" content="monokarp.github.io" key="ogurl" />
+        <meta property="og:title" content="CV Oleg Bondarenko" key="ogtitle" />
+        <meta property="og:description" content="A brief summary of my professional career in SE" key="ogdesc" />
+      </Head>
       <div className='flex flex-col lg:w-1/2'>
         <div className='flex flex-col p-5'>
           <NameAndTitle />
