@@ -8,10 +8,10 @@ const title = 'Bondarenko Oleg CV';
 
 export const metadata: Metadata = {
   title,
-  openGraph:{
+  openGraph: {
     title,
-    url:'monokarp.github.io',
-    description:'A brief summary of my professional career in SE'
+    url: 'monokarp.github.io',
+    description: 'A brief summary of my professional career in SE.'
   }
 };
 
