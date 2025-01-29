@@ -6,6 +6,7 @@ export default function ContactInfo() {
         <div className='pt-3 text-sm'>
             <div>Contact info:</div>
             <div>{'mnkrp.ml@gmail.com'}</div>
+            <div>{'+48 503 524 097'}</div>
             <div>{'+38 099 925 78 73'}</div>
             <Link className="link" href='https://t.me/iloveparting'>Telegram</Link>
           <PdfButton />

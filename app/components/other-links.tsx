@@ -1,19 +1,34 @@
 import Link from "next/link";
 
-type OtherLinksProps = {
+interface LinkGroup {
+    title: string;
     links: {
         name: string,
         value: string,
     }[];
 }
 
-export default function OtherLinks({ links }: OtherLinksProps) {
+type OtherLinksProps = {
+    groups: LinkGroup[];
+};
+
+export default function OtherLinks({ groups }: OtherLinksProps) {
     return (
-        <div className='pt-3 text-sm'>
-            <div>Relevant links:</div>
+        <div>
             {
-                links.map((one, idx) =>
-                    <div key={idx} className="link">
+                groups.map((group, idx) => <LinkGroup key={idx} group={group} />)
+            }
+        </div>
+    );
+}
+
+function LinkGroup({ group }: { group: LinkGroup }) {
+    return (
+        <div className='pt-3 text-base'>
+            {group.title}
+            {
+                group.links.map((one, idx) =>
+                    <div key={idx} className="link text-sm">
                         <Link href={one.value}>{one.name}</Link>
                     </div>
                 )

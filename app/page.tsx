@@ -24,12 +24,24 @@ export default function Home() {
             unoptimized
           />
           <ContactInfo />
-          <OtherLinks links={[
-            { name: 'Github', value: 'https://github.com/monokarp' },
-            { name: 'Codewars', value: 'https://www.codewars.com/users/iLovePartinG' },
-            { name: 'Core JS assessment', value: 'https://www.app.javascriptinstitute.org/profile/UGV210901565' },
-            { name: 'CAE assessment', value: './StatementOfResult.pdf' },
-          ]} />
+          <OtherLinks groups={
+            [
+              {
+                title: 'Links:',
+                links: [
+                  { name: 'Github', value: 'https://github.com/monokarp' },
+                  { name: 'Codewars', value: 'https://www.codewars.com/users/iLovePartinG' },
+                ]
+              },
+              {
+                title: 'Certifications:',
+                links: [
+                  { name: 'Core JS assessment', value: 'https://www.app.javascriptinstitute.org/profile/UGV210901565' },
+                  { name: 'CAE assessment', value: './StatementOfResult.pdf' },
+                ]
+              }
+            ]
+          } />
           <Summary />
           <Languages />
           <Education />
