@@ -1,6 +1,6 @@
 export default function Education() {
   return (
-    <div className="pt-3 text-xs">
+    <div className="pt-3 text-s">
       <p className="text-base font-bold">Education:</p>
       <p>V. N. Karazin Kharkiv National University</p>
       <p>Master&apos;s degree in Math</p>

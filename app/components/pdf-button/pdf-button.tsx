@@ -13,7 +13,7 @@ export default function PdfButton() {
                 },
                 jsPDF: {
                     orientation: 'portrait',
-                    format: window.innerWidth < 1024 ? [210, 578] : [420, 511],
+                    format: window.innerWidth < 1024 ? [210, 578] : [420, 588],
                 }
             })
             .from(document.body)
