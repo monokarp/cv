@@ -17,7 +17,7 @@ export default function CareerTimeline({ projects }: CareerProps) {
 
     return (
         <div className='m-2'>
-            <div className='pb-2 text-sm'>{`Timeline: ${formatDate(timelineStart)} - ${formatDate(timelineEnd)} (${yearTotal} YOE)`}</div>
+            <div className='pb-2 text-md font-semibold'>{`Timeline: ${formatDate(timelineStart)} - ${formatDate(timelineEnd)} (${yearTotal} YOE)`}</div>
             {
                 projects.reverse().map((project, index) =>
                     <div className='flex flex-row' key={index}>

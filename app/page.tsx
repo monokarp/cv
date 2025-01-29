@@ -8,6 +8,7 @@ import NameAndTitle from './components/name-title';
 import OtherLinks from './components/other-links';
 import Summary from './components/summary';
 import Head from 'next/head';
+import TLDR from './components/tldr';
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
               }
             ]
           } />
+          <TLDR />
           <Summary />
           <Languages />
           <Education />
@@ -98,7 +100,7 @@ export default function Home() {
             to: new Date('06/01/2023'),
             title: 'In-store database sync for a POS app',
             techStack: '.NET Core, C#, Azure, Docker, MsSQL',
-            team: '2 SEs and a technical consultant from each side.',
+            team: '2 SEs and a technical consultant from both sides.',
             description: `The project was to design and develop services for the client's POS solution to sync transactional data between store and cloud in a schema-agnostic way.`,
           },
         ]} />

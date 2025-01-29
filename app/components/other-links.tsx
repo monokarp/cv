@@ -25,7 +25,7 @@ export default function OtherLinks({ groups }: OtherLinksProps) {
 function LinkGroup({ group }: { group: LinkGroup }) {
     return (
         <div className='pt-3 text-base'>
-            {group.title}
+            <div className="font-bold">{group.title}</div>
             {
                 group.links.map((one, idx) =>
                     <div key={idx} className="link text-sm">

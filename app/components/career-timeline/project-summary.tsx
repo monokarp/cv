@@ -11,7 +11,7 @@ export default function ProjectSummary({ project }: ProjectSummaryProps) {
             <p className='text-base tracking-normal'>{project.employer}</p>
             <p className='pb-2'>{`${formatDate(project.from)} - ${formatDate(project.to)}`}</p>
             <p className='text-sm pb-1'>{project.title}</p>
-            <p className='pb-1'>{`Key technologies: ${project.techStack}`}</p>
+            <p className='pb-1 my-2'>{`Key technologies: ${project.techStack}`}</p>
             <p className='pb-1'>{`Team composition: ${project.team}`}</p>
             <p className='pb-1'>{project.description}</p>
         </div>
