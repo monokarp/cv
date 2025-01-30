@@ -69,8 +69,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Generate PDF from static assets
         run: |
-        ls
-        REPO_NAME=${{ vars.REPO_NAME }} node generate-pdf
+          ls
+          REPO_NAME=${{ vars.REPO_NAME }} node generate-pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
