@@ -39,7 +39,7 @@ async function runBrowserAndSavePDF() {
 }
 
 const repoPrefix = isGithubActions && isProd ? repoName : "";
-const originalPrefix = `${repoPrefix}/_next/`;
+const originalPrefix = `/${repoPrefix}/_next/`;
 const relativePrefix = `./${repoPrefix}/_next/`;
 
 (async () => {

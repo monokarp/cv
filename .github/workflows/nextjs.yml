@@ -68,7 +68,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Generate PDF from static assets
-        run: ${{ steps.detect-package-manager.outputs.runner }} node generate-pdf --no-sandbox
+        run: ${{ steps.detect-package-manager.outputs.runner }} node generate-pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
