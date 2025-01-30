@@ -1,5 +1,5 @@
+import Link from "next/link";
 import Delimiter from "../common/delimiter";
-import PdfButton from "../pdf-button/pdf-button";
 
 export default function ContactInfo() {
   return (
@@ -9,7 +9,9 @@ export default function ContactInfo() {
       <div>{"mnkrp.ml@gmail.com"}</div>
       <div>{"+48 503 524 097 (WhatsApp)"}</div>
       <div>{"+38 099 925 78 73 (Telegram)"}</div>
-      <PdfButton />
+      <div className="link hover:text-orange-400 hover:font-bold">
+          <Link href='./bondarenko-oleh-cv.pdf'>(Download PDF)</Link>
+        </div>
     </div>
   );
 }

@@ -1,14 +1,13 @@
 import Image from "next/image";
 import portrait from "../public/portrait.jpg";
 import CareerTimeline from "./components/career-timeline/career-timeline";
+import NameAndTitle from "./components/name-title";
 import ContactInfo from "./components/sidebar/contact-info";
 import Education from "./components/sidebar/education";
 import Languages from "./components/sidebar/languages";
-import NameAndTitle from "./components/name-title";
 import OtherLinks from "./components/sidebar/other-links";
-import Summary from "./components/summary";
-import Head from "next/head";
 import TechStack from "./components/sidebar/tech-stack";
+import Summary from "./components/summary";
 
 export default function Home() {
   return (
