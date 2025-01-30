@@ -29,9 +29,9 @@ async function runBrowserAndSavePDF() {
     waitUntil: "networkidle0",
   });
 
-  console.log("page response", response);
+  console.log("page response", await response.text());
 
-  console.log("page content", page.content());
+  console.log("page content", await page.content());
 
   await page.pdf({
     scale: 1.15,
