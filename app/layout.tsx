@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Tinos } from "next/font/google";
+import { Arimo } from "next/font/google";
 
-const tinos = Tinos({ weight: "400", subsets: ["latin"] });
+const font = Arimo({ subsets: ["latin"] });
 
 const title = "Bondarenko Oleg CV";
 
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={tinos.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }
