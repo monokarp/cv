@@ -25,9 +25,13 @@ async function runBrowserAndSavePDF() {
 
   const page = await browser.newPage();
 
-  await page.goto(`file:///${pageIndexPath}`, {
+  const response = await page.goto(`file:///${pageIndexPath}`, {
     waitUntil: "networkidle0",
   });
+
+  console.log("page response", response);
+
+  console.log("page content", page.content());
 
   await page.pdf({
     scale: 1.15,
@@ -42,10 +46,10 @@ async function runBrowserAndSavePDF() {
 const originalPrefix = isGithubActions ? `/${repoName}/_next/` : "/_next/";
 const relativePrefix = `./_next/`;
 
-// (async () => {
-//   await replaceInStaticPage(originalPrefix, relativePrefix);
+(async () => {
+  await replaceInStaticPage(originalPrefix, relativePrefix);
 
-//   await runBrowserAndSavePDF();
+  await runBrowserAndSavePDF();
 
-//   await replaceInStaticPage(relativePrefix, originalPrefix);
-// })();
+  await replaceInStaticPage(relativePrefix, originalPrefix);
+})();
