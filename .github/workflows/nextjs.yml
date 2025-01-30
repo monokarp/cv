@@ -70,7 +70,7 @@ jobs:
       - name: Generate PDF from static assets
         run: ${{ steps.detect-package-manager.outputs.runner }} node generate-pdf
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           path: ./out
 
