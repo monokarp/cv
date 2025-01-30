@@ -70,7 +70,7 @@ jobs:
       - name: Generate PDF from static assets
         run: ${{ steps.detect-package-manager.outputs.runner }} node generate-pdf --no-sandbox
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
@@ -78,7 +78,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.artifact-url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
