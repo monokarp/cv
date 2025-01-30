@@ -6,6 +6,10 @@ const isGithubActions = process.env.GITHUB_ACTIONS || false;
 const repoName = process.env.REPO_NAME;
 const isProd = process.env.NODE_ENV === "production";
 
+console.log("isGithubActions", isGithubActions);
+console.log("repoName", repoName);
+console.log("isProd", isProd);
+
 const pageIndexPath = path.resolve("./out/index.html");
 
 async function replaceInStaticPage(v1, v2) {
@@ -42,8 +46,8 @@ async function runBrowserAndSavePDF() {
 }
 
 const repoPrefix = isGithubActions && isProd ? repoName : "";
-const originalPrefix = `/${repoPrefix}/_next/`;
-const relativePrefix = `./${repoPrefix}/_next/`;
+const originalPrefix = repoPrefix ? `/${repoPrefix}/_next/` : "/_next/";
+const relativePrefix = repoPrefix ? `./${repoPrefix}/_next/` : "./_next/";
 
 (async () => {
   await replaceInStaticPage(originalPrefix, relativePrefix);
