@@ -9,12 +9,15 @@ const isProd = process.env.NODE_ENV === "production";
 const pageIndexPath = path.resolve("./out/index.html");
 
 async function replaceInStaticPage(v1, v2) {
-  console.log(pageIndexPath);
+  console.log("Page path is", pageIndexPath);
+  console.log(`Replacing "${v1}" with "${v2}"`);
   const content = await fs.readFile(pageIndexPath, "utf-8");
+
+  console.log(content);
 
   const modified = content.replace(new RegExp(v1, "g"), v2);
 
-  debugger;
+  console.log(modified);
 
   await fs.writeFile(pageIndexPath, modified, "utf8");
 }
