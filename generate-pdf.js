@@ -3,15 +3,16 @@ const path = require("path");
 const fs = require("fs").promises;
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-const repoName = process.env.REPO_NAME || 'cv';
+const repoName = process.env.REPO_NAME || "cv";
 
+console.log("env", process.env);
 console.log("isGithubActions", isGithubActions);
 console.log("repoName", repoName);
 
 const pageIndexPath = path.resolve("./out/index.html");
+console.log("Page path is", pageIndexPath);
 
 async function replaceInStaticPage(v1, v2) {
-  console.log("Page path is", pageIndexPath);
   console.log(`Replacing "${v1}" with "${v2}"`);
   const content = await fs.readFile(pageIndexPath, "utf-8");
 
@@ -40,12 +41,12 @@ async function runBrowserAndSavePDF() {
 }
 
 const originalPrefix = isGithubActions ? `/${repoName}/_next/` : "/_next/";
-const relativePrefix = `./_next/`;
+const relativePrefix = `.${repoName}`;
 
-(async () => {
-  await replaceInStaticPage(originalPrefix, relativePrefix);
+// (async () => {
+//   await replaceInStaticPage(originalPrefix, relativePrefix);
 
-  await runBrowserAndSavePDF();
+//   await runBrowserAndSavePDF();
 
-  await replaceInStaticPage(relativePrefix, originalPrefix);
-})();
+//   await replaceInStaticPage(relativePrefix, originalPrefix);
+// })();
