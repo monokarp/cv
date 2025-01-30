@@ -5,7 +5,6 @@ const fs = require("fs").promises;
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
 const repoName = process.env.REPO_NAME;
 
-console.log("env", process.env);
 console.log("isGithubActions", isGithubActions);
 console.log("repoName", repoName);
 
@@ -41,7 +40,7 @@ async function runBrowserAndSavePDF() {
 }
 
 const originalPrefix = isGithubActions ? `/${repoName}/_next/` : "/_next/";
-const relativePrefix = `.${repoName}`;
+const relativePrefix = `./_next/`;
 
 // (async () => {
 //   await replaceInStaticPage(originalPrefix, relativePrefix);
