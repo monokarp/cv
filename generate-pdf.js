@@ -46,8 +46,8 @@ async function runBrowserAndSavePDF() {
 }
 
 const repoPrefix = isGithubActions && isProd ? repoName : "";
-const originalPrefix = repoPrefix ? `/${repoPrefix}/_next/` : "/_next/";
-const relativePrefix = repoPrefix ? `./${repoPrefix}/_next/` : "./_next/";
+const originalPrefix = isGithubActions ? `/cv/_next/` : "/_next/";
+const relativePrefix = isGithubActions ? `./cv/_next/` : "./_next/";
 
 (async () => {
   await replaceInStaticPage(originalPrefix, relativePrefix);
