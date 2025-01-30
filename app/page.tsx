@@ -15,7 +15,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center text-black break-after">
       <div className="flex flex-col lg:flex-row lg:w-3/4">
         <div className="flex flex-col lg:w-[30%] bg-slate-600 text-gray-300 [&>*]:px-4 [&>*]:pb-4">
-          <div className="flex justify-center text-2xl mt-4 lg:hidden"><NameAndTitle /></div>
+          <div className="flex justify-center text-2xl mt-4 lg:hidden">
+            <NameAndTitle />
+          </div>
           <Image
             className="self-center lg:pt-4"
             src={portrait}
@@ -59,7 +61,9 @@ export default function Home() {
         </div>
         <div className="flex flex-col lg:w-[70%] p-4">
           <div className="flex flex-col p-5">
-            <div className="hidden text-2xl lg:block"><NameAndTitle /></div>
+            <div className="hidden text-2xl lg:block">
+              <NameAndTitle />
+            </div>
             <Summary />
           </div>
           <CareerTimeline
@@ -68,60 +72,64 @@ export default function Home() {
                 employer: "Global Logic",
                 from: new Date("06/01/2015"),
                 to: new Date("02/01/2017"),
-                title: "Ecommerce web app",
-                techStack: "C#, VB6, ASP.NET, MS Web Api, MsSQL",
-                team: "Two senior specialists (.NET and DB) and I.",
+                title: "Ecommerce Web Application",
+                techStack: "C#, VB6, ASP.NET, Microsoft Web API, MS SQL",
+                team: "Comprised of two senior specialists in .NET and database management, along with myself.",
                 description:
-                  "Legacy ecommerce platform support (mostly bug fixing + infrequent feature development requested by the client).",
+                  "Provided support for a legacy ecommerce platform, primarily focusing on bug fixes and occasional feature development as requested by the client.",
               },
               {
                 employer: "Global Logic",
                 from: new Date("02/01/2017"),
                 to: new Date("11/01/2017"),
-                title: "Back office data analytics web app",
-                techStack: "Angular, TS, C#, MS Web Api, MsSQL, MS PowerBI",
-                team: "A team of one senior and a few junior SEs supervised by a tech consultant, with a dedicated QA and DB specialist and a BA from the client.",
+                title: "Back Office Data Analytics Web Application",
+                techStack:
+                  "Angular, TypeScript, C#, Microsoft Web API, MS SQL, Microsoft PowerBI",
+                team: "A team consisting of one senior and several junior software engineers, supervised by a technical consultant, with dedicated QA, database specialist, and business analyst from the client's side.",
                 description:
-                  "A web UI that interactively embeds charts from a third-party analytics service, written from scratch.",
+                  "Developed a web UI from the ground up, embedding interactive charts from a third-party analytics service.",
               },
               {
                 employer: "Dev.Pro",
                 from: new Date("12/01/2017"),
                 to: new Date("12/01/2021"),
-                title: "POS app for a restaurant SW solution",
+                title: "POS Application for Restaurant Software Solution",
                 techStack:
-                  "Angular, RxJS, TS, Jest, Protractor, Cordova, SQLite, Node, MongoDB",
-                team: "Over 50 POS developers; dedicated BA, QA, AQA, infrastructure and backend teams.",
-                description: `Long-term development of a feature-rich restaurant software solution. Over the years I partook in various responsibilities: designing, implementing and overseeing the development of product features of all scope sizes, internal project tools, e2e testing, project documentation and onboarding processes, feature-ownership of a product's sub-domain, code review. Involved in regular communication with all dedicated teams.`,
+                  "Angular, RxJS, TypeScript, Jest, Protractor, Cordova, SQLite, Node.js, MongoDB",
+                team: "Over 50 developers focused on POS; with dedicated business analysts, quality assurance, automated quality assurance, infrastructure, and backend teams.",
+                description:
+                  "Engaged in long-term development of a comprehensive restaurant software solution, involving design, implementation, and oversight of feature development across various scopes, internal project tools, end-to-end testing, documentation, onboarding, and feature ownership of a product subdomain. Conducted regular code reviews and maintained communication with all dedicated teams.",
               },
               {
                 employer: "Dev.Pro",
                 from: new Date("01/01/2022"),
                 to: new Date("05/01/2022"),
-                title: "Web UI for an in-store POS and kitchen server",
-                techStack: "Angular, TS, Jest, Cypress",
-                team: "A team of about 10. I communicated with a designer, product owner and tech consultants on the client side; finished the project mostly solo, with a followup knowledge transfer to another SE.",
-                description: `The client's initiative to expand their business into a new country required a few features, mostly to do with local law compliance (hardware, i18n, frontend facelift). My specific scope was to bring an existing frontend to a modern tech stack.`,
+                title: "Web UI for In-Store POS and Kitchen Server",
+                techStack: "Angular, TypeScript, Jest, Cypress",
+                team: "A team of approximately 10 individuals. I liaised with a designer, product owner, and technical consultants on the client side; completed the project mostly independently, followed by knowledge transfer to another software engineer.",
+                description:
+                  "In response to the client's expansion into a new country, implemented features for local law compliance, including hardware adjustments, internationalization, and a frontend refresh. My specific role was to upgrade the existing frontend to a modern technology stack.",
               },
               {
                 employer: "Dev.Pro",
                 from: new Date("05/01/2022"),
                 to: new Date("12/01/2022"),
                 title:
-                  "Internal company tool development and trainee mentoring",
-                techStack: "Angular, Nest, Postgres",
-                team: "Me and another senior SE supervising a team of a dozen trainees",
+                  "Internal Company Tool Development and Trainee Mentoring",
+                techStack: "Angular, Nest, PostgreSQL",
+                team: "Myself and another senior software engineer supervising a team of twelve trainees",
                 description:
-                  "The goal was to develop a new internal contractor-facing tool. I would mostly design and do detailed code review.",
+                  "Focused on developing a new internal tool for contractors, where my responsibilities included technical design and detailed code review.",
               },
               {
                 employer: "Dev.Pro",
                 from: new Date("01/01/2023"),
                 to: new Date("06/01/2023"),
-                title: "In-store database sync for a POS app",
-                techStack: ".NET Core, C#, Azure, Docker, MsSQL",
-                team: "2 SEs and a technical consultant from both sides.",
-                description: `The project was to design and develop services for the client's POS solution to sync transactional data between store and cloud in a schema-agnostic way.`,
+                title: "In-Store Database Synchronization for POS Application",
+                techStack: ".NET Core, C#, Azure, Docker, MS SQL",
+                team: "Two software engineers and one technical consultant from each side.",
+                description:
+                  "Designed and developed services for the client's POS solution to synchronize transactional data between store and cloud in a schema-agnostic manner.",
               },
             ]}
           />

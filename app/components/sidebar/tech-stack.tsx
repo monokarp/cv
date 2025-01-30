@@ -6,7 +6,7 @@ export default function TechStack() {
       <p className="text-xl font-bold">Tech stack summary:</p>
       <Delimiter />
       <p>
-        <span className="font-bold ">Main:</span> TypeScript, Angular, Nest.js,
+        <span className="font-bold ">Main:</span> TypeScript, Angular, NgRx, RxJs, Nest.js,
         Node.js, Jest, Cypress, SQLite, Postgres, Docker, GCP, CI/CD
       </p>
       <p>
