@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs").promises;
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-const repoName = process.env.REPO_NAME || "cv";
+const repoName = process.env.REPO_NAME;
 
 console.log("env", process.env);
 console.log("isGithubActions", isGithubActions);
